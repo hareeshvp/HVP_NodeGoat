@@ -17,6 +17,7 @@ steps:
     polarisCommand: 'analyze -w'
 
 - task: SynopsysDetectTask@3
+  displayName: 'Synopsys BlackDuck'
   inputs:
     BlackDuckService: 'BlackDuck_Test'
     DetectVersion: 'latest'
