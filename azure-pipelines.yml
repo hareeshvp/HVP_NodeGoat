@@ -15,3 +15,9 @@ steps:
   inputs:
     polarisService: 'SIPSE_POLARIS'
     polarisCommand: 'analyze -w'
+
+- task: SynopsysDetectTask@3
+  inputs:
+    BlackDuckService: 'BlackDuck_Test'
+    DetectVersion: 'latest'
+#    DetectArguments: '--api=1'
