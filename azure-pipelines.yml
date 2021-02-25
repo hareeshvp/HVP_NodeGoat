@@ -11,6 +11,7 @@ pool:
 
 steps:
 - task: SynopsysPolaris@1
+  displayName: 'Synopsys Polaris'
   inputs:
     polarisService: 'SIPSE_POLARIS'
     polarisCommand: 'analyze -w'
