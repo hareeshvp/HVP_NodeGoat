@@ -1,0 +1,34 @@
+version: "1"
+project:
+  name: ${scm.git.repo}
+  branch: ${scm.git.branch}
+  revision:
+    name: ${scm.git.commit}
+    date: ${scm.git.commit.date}
+
+capture:
+
+  coverity:
+    buildless:
+      project:
+        languages:
+          - "javascript"
+
+  fileSystem:
+
+    javascript:
+      files:
+      - directory: ${project.projectDir}
+      - excludeRegex: node_modules|bower_components|vendor
+
+analyze:
+  mode: central
+  coverity:
+    cov-analyze: [ "--all", "--webapp-security"]
+#    cov-analyze: [ "--aggressiveness-level", "high", "--all", "--security", "--webapp-security", "--webapp-security-aggressiveness-level", "high", "--distrust-all", "--enable-audit-mode"]
+
+install:
+  coverity:
+    version: default
+
+serverUrl: https://sipse.polaris.synopsys.com
