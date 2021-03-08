@@ -1,7 +1,7 @@
 version: "1"
 project:
-  name: ${scm.git.repo}
-  branch: ${scm.git.branch}
+  name: Hareesh_Node_Goat_Test1
+  branch: Master1
   revision:
     name: ${scm.git.commit}
     date: ${scm.git.commit.date}
@@ -24,7 +24,7 @@ capture:
 analyze:
   mode: central
   coverity:
-    cov-analyze: [ "--all", "--webapp-security"]
+    cov-analyze: ["--all"]
 #    cov-analyze: [ "--aggressiveness-level", "high", "--all", "--security", "--webapp-security", "--webapp-security-aggressiveness-level", "high", "--distrust-all", "--enable-audit-mode"]
 
 install:
