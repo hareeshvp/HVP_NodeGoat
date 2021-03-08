@@ -22,3 +22,4 @@ steps:
     BlackDuckService: 'BlackDuck_Test'
     DetectVersion: 'latest'
 #    DetectArguments: '--api=1'
+     DetectArguments: '--detect.parent.project.name=”Demo_Application” and --detect.parent.project.version.name=”2021.03"'
