@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#trigger:
+#- master
+
+pool:
+  vmImage: macOS-latest
+
+steps:
+#- task: SynopsysPolaris@1
+#  displayName: 'Synopsys Polaris'
+#  inputs:
+#    polarisService: 'SIPSE_POLARIS'
+#    polarisCommand: 'analyze -w'
+
+- task: SynopsysDetectTask@3
+  displayName: 'Synopsys BlackDuck'
+  inputs:
+    BlackDuckService: 'BlackDuck_Test'
+    DetectVersion: 'latest'
+    DetectArguments: '--detect.parent.project.name="Demo_Application" --detect.parent.project.version.name="2021.03" --detect.project.name="Node_Goat_Test1" --detect.project.version.name="Test1.0"'
