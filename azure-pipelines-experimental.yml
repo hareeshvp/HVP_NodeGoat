@@ -16,9 +16,17 @@ steps:
 #    polarisService: 'SIPSE_POLARIS'
 #    polarisCommand: 'analyze -w'
 
-- task: SynopsysDetectTask@3
-  displayName: 'Synopsys BlackDuck'
+- task: SynopsysPolaris@1
+  displayName: 'Synopsys Polaris'
   inputs:
-    BlackDuckService: 'BlackDuck_Test'
-    DetectVersion: 'latest'
-    DetectArguments: '--detect.parent.project.name="Demo_Application" --detect.parent.project.version.name="2021.03" --detect.project.name="Node_Goat_Test1" --detect.project.version.name="Test1.0"'
+    polarisService: 'SIPSE_POLARIS'
+    polarisCommand: 'analyze'
+    waitForIssues: true
+
+
+#- task: SynopsysDetectTask@3
+#  displayName: 'Synopsys BlackDuck'
+#  inputs:
+#    BlackDuckService: 'BlackDuck_Test'
+#    DetectVersion: 'latest'
+#    DetectArguments: '--detect.parent.project.name="Demo_Application" --detect.parent.project.version.name="2021.03" --detect.project.name="Node_Goat_Test1" --detect.project.version.name="Test1.0"'
