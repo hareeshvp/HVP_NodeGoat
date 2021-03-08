@@ -10,18 +10,11 @@ pool:
   vmImage: macOS-latest
 
 steps:
-#- task: SynopsysPolaris@1
-#  displayName: 'Synopsys Polaris'
-#  inputs:
-#    polarisService: 'SIPSE_POLARIS'
-#    polarisCommand: 'analyze -w'
-
 - task: SynopsysPolaris@1
   displayName: 'Synopsys Polaris'
   inputs:
     polarisService: 'SIPSE_POLARIS'
-    polarisCommand: 'analyze'
-    waitForIssues: true
+    polarisCommand: 'analyze -w'
 
 
 #- task: SynopsysDetectTask@3
