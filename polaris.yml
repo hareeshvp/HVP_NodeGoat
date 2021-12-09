@@ -24,7 +24,7 @@ capture:
 analyze:
   mode: central
   coverity:
-    cov-analyze: ["--all"]
+    cov-analyze: [ "--all", "--webapp-security", "--enable-audit-mode" ]
 #    cov-analyze: [ "--aggressiveness-level", "high", "--all", "--security", "--webapp-security", "--webapp-security-aggressiveness-level", "high", "--distrust-all", "--enable-audit-mode"]
 
 install:
