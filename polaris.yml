@@ -1,6 +1,6 @@
 version: "1"
 project:
-  name: Hareesh_Node_Goat_Test1
+  name: HVP_NodeGoat
   branch: Master1
   revision:
     name: ${scm.git.commit}
